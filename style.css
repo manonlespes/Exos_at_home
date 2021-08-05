@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("Roboto-Regular.ttf");
+}
+
+html {
+    width: 100%;
+    height:100%;
+    font-size:20px;
+    margin: 0;
+    padding: 0;
+}
+
+/*--Début de mon header*/
+header{
+    margin: none;
+    padding: none;
+    width: 100%;
+    position: -webkit-sticky; /*safari*/
+    position: sticky;
+    top: 0;
+}
+/*--banner pour info sur ristourne livraison*/
+
+.topBanner{
+    margin:0;
+    padding: 0;
+    width: 100%;
+    height: 35px;
+    background-color: #ff8da1;
+}
+
+p{
+    margin: auto;
+    padding: 12px;
+    font-family: "Roboto";
+    color: white;
+    text-align: center;
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+}
+
+span.infoDelivery{
+    text-transform: uppercase;
+    font-weight: bold;
+}
