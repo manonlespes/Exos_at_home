@@ -22,8 +22,12 @@ body{
     box-sizing: border-box;
 }
 
-.containerFlex{
+.containerFlex2{
     display: flex;
+    background-color: white;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: baseline;
 }
 
                                 /*--Début de mon header*/
@@ -33,8 +37,7 @@ header{
     width: 100%;
     position: -webkit-sticky; /*safari*/
     position: sticky;
-    top: 0;
-    flex-flow: row wrap; /*--Pour que ce soit sur une seule ligne et responsive*/
+    top: 0;    
 }
 /*--banner pour info sur ristourne livraison*/
 
@@ -71,13 +74,7 @@ div.secondBanner{
     border: 1px solid black;
     background-color: #ffffff;
 }
-/*--barre de recherche
-
-img[title="searchIcon"]{
-    width: 15px;
-    height: 15px;
-    color: #ff8da1;
-}*/
+/*--barre de recherche*/
 
 input::placeholder{
     color:black;
@@ -85,13 +82,24 @@ input::placeholder{
     letter-spacing: 0.5px;;
 }
 
-
-.searchIcon::before {
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-	font-weight: 400;
-	content: "\f002";
+.fa-search{
     color: #ff8da1;
     width: 15px;
     height: 15px;
 }
+
+h1{
+    margin:0;
+    padding: 0;
+    font-family: "roboto";
+    letter-spacing: 3px;
+    font-size: 2rem;
+}
+
+.secondBanner, .mainLogo, .smallerLogos{
+    margin-top: 10px;
+}
+
+
+
+

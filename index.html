@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="regular.css">
+    <link rel="stylesheet" href="brands.css">
+    <link rel="stylesheet" href="solid.css">
+    <link rel="stylesheet" href="fontawesome.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399" crossorigin="anonymous"></script>
     <title>Reproducing NAFNAF Home page</title>
+    <script src="https://kit.fontawesome.com/0e9c9dec41.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <!--Début de mon header-->
-    <header class="containerFlex">
-        <div class="topBanner">
+    <header>
+        <div class="topBanner containerFlex2">
             <!--banner pour info sur ristourne livraison-->
             <p><span class="infoDelivery">livraison gratuite</span> en boutique et à partir de <span
                     class="infoDelivery">69€</span> via
@@ -22,39 +26,36 @@
             </p>
         </div>
 
-        <div class="secondBanner">
-            <!--div contenant la barre de recherche/logos + menu-->
+        <div class="secondBanner containerFlex2">
+            <!--div contenant la barre de recherche+titre/logos-->
+
+            <!--barre de recherche-->
             <div>
-                <!--barre de recherche-->
-                <div class="searchBar">
-                    <form action="#">
-                        <span class="searchIcon"></span>
-                        <input type="text" placeholder="RECHERCHER" name="search">
-                    </form>
-                </div>
-
-                <div class="mainLogo">
-                    <img src="" alt="">
-                </div>
-
-                <div class="smallerLogos">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                </div>
+                <form action="#" class="containerFlex2 searchBar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="RECHERCHER" name="search">
+                </form>
+            </div>
+            
+            <!--titre de la page-->
+            <div class="mainLogo containerFlex2">
+                <h1>COPY WEBPAGE NAFNAF</h1>
             </div>
 
-            <nav class="navBar">
-                <!--menu-->
-                <ul>
-                    <li><a href="#nouveaute"></a>nouveautés</li>
-                    <li><a href="#collection">collection</a></li>
-                    <li><a href="#robes"></a>robes</li>
-                    <li><a href="#accessoires">accessoires</a></li>
-                </ul>
-            </nav>
+            <!--petits logos pour suivre la page-->
+            <div class="smallerLogos containerFlex">EST</div>
         </div>
     </header>
+    
+    <nav class="navBar">
+        <!--menu-->
+        <ul>
+            <li><a href="#nouveaute"></a>nouveautés</li>
+            <li><a href="#collection">collection</a></li>
+            <li><a href="#robes"></a>robes</li>
+            <li><a href="#accessoires">accessoires</a></li>
+        </ul>
+    </nav>
 
     <section class="firstImage">
         <img src="" alt="">
