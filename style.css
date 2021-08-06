@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Roboto";
+    font-family: "roboto";
     src: url("Roboto-Regular.ttf");
 }
 
@@ -18,6 +18,14 @@ body{
     padding: 0;
 }
 
+*{
+    box-sizing: border-box;
+}
+
+.containerFlex{
+    display: flex;
+}
+
                                 /*--Début de mon header*/
 header{
     margin: none;
@@ -26,6 +34,7 @@ header{
     position: -webkit-sticky; /*safari*/
     position: sticky;
     top: 0;
+    flex-flow: row wrap; /*--Pour que ce soit sur une seule ligne et responsive*/
 }
 /*--banner pour info sur ristourne livraison*/
 
@@ -40,7 +49,7 @@ header{
 p{
     margin: auto;
     padding: 8px;
-    font-family: "Roboto";
+    font-family: "roboto";
     color: white;
     text-align: center;
     font-size: 0.75rem;
@@ -62,10 +71,27 @@ div.secondBanner{
     border: 1px solid black;
     background-color: #ffffff;
 }
-/*--barre de recherche*/
+/*--barre de recherche
 
 img[title="searchIcon"]{
     width: 15px;
     height: 15px;
     color: #ff8da1;
+}*/
+
+input::placeholder{
+    color:black;
+    font-family: "roboto";
+    letter-spacing: 0.5px;;
+}
+
+
+.searchIcon::before {
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+	font-weight: 400;
+	content: "\f002";
+    color: #ff8da1;
+    width: 15px;
+    height: 15px;
 }
