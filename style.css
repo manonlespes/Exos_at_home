@@ -22,18 +22,20 @@ body{
     box-sizing: border-box;
 }
 
-.containerFlex2{
+
+
+                                /*--Début de mon header*/
+.containerFlex1{
     display: flex;
     background-color: white;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
 }
 
-                                /*--Début de mon header*/
-header{
-    margin: none;
-    padding: none;
+header, nav{
+    margin: 0;
+    padding: 0;
     width: 100%;
     position: -webkit-sticky; /*safari*/
     position: sticky;
@@ -70,24 +72,14 @@ div.secondBanner{
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 130px;
-    border: 1px solid black;
+    height: 55px;
     background-color: #ffffff;
 }
-/*--barre de recherche*/
 
-input::placeholder{
-    color:black;
-    font-family: "roboto";
-    letter-spacing: 0.5px;;
+.secondBanner, .mainLogo, .smallerLogos{
+    margin-top: 10px;
 }
-
-.fa-search{
-    color: #ff8da1;
-    width: 15px;
-    height: 15px;
-}
-
+/*--titre de la page*/
 h1{
     margin:0;
     padding: 0;
@@ -96,10 +88,106 @@ h1{
     font-size: 2rem;
 }
 
-.secondBanner, .mainLogo, .smallerLogos{
-    margin-top: 10px;
+/*--barre de recherche*/
+.searchBar{
+    margin-left: 25px;
+}
+
+.fa-search{
+    color: #ff8da1;
+    font-size:1.1rem;
+    margin-right: 15px;
+}
+
+input::placeholder{
+    color:black;
+    font-family: "roboto";
+    letter-spacing: 0.5px;;
+    font-size: 0.80rem;
+}
+
+input[type="text"], input[type="text"]:focus {
+    border: none;
+    outline: none; /*pour enlever le cadre autour*/
 }
 
 
+.animationUnderline{
+    margin: 0;
+    margin-left: 33px;
+    width: 0px;
+    height: 2px;
+    background-color: transparent;
+    transition: all 0.8s ease-in-out;
+}
 
+
+div.searchBar:hover div.animationUnderline, div.searchBar:active div.animationUnderline{
+    background-color: #ff8da1;
+    width: 87px;
+    height: 2px;
+}
+
+/*--petits logos pour suivre la page*/
+.smallerLogos{
+    margin-right: 25px;;
+}
+
+.fa-map-marker-alt, .fa-user-alt, .fa-heart, .fa-shopping-bag{
+    color: #ff8da1;
+    font-size: 1.2rem;
+    padding-right: 12px;
+    }
+
+
+.fa-shopping-bag{
+    padding-right: 0px;
+}
+
+
+                                /*--Début de mon menu*/
+
+nav{
+    margin:auto;
+    height: 45px;
+}
+.containerFlex2{
+    display: flex;
+    background-color: white;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    display: inline-block;
+    padding: 25px;
+}
+
+a.menu{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "roboto";
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    color: black;
+}
+
+a.menu:active, a.menu:focus{
+color: #ff8da1;
+}
+
+#underline-1{
+    margin: 0;
+    margin-left: 350px;
+    width: 150px;
+    height: 2px;
+    background-color: #ff8da1;
+    
+}
 
