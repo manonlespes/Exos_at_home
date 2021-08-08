@@ -30,7 +30,7 @@ body{
     align-items: baseline;
 }
 
-header, nav{
+header, nav{ /*TODO!!!!!!!!POURQUOI unqiuement ma nav reste sticky?*/
     margin: 0;
     padding: 0;
     width: 100%;
@@ -203,3 +203,17 @@ width: 100%;
 left: 0;
 right: auto;
 }
+
+
+/*Début de Image Banner*/
+section{ /* à modifier ou alors spécifier quelque part que toutes les sections prochaines devront aussi être flex*/
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 150px;
+}
+
+img.firstImage{
+    object-fit: stretch;
+}
+
