@@ -1,0 +1,205 @@
+@font-face {
+    font-family: "roboto";
+    src: url("Roboto-Regular.ttf");
+}
+
+html {
+    width: 100%;
+    height:100%;
+    font-size:16px;
+}
+
+body{
+    width: 100%;
+    height:100%;
+}
+
+*, *::before, *::after{ 
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+                                /*--Début de mon header*/
+.containerFlex1{
+    display: flex;
+    background-color: white;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header, nav{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: -webkit-sticky; /*safari*/
+    position: sticky;
+    top: 0;    
+}
+/*--banner pour info sur ristourne livraison*/
+
+.topBanner{
+    margin:0;
+    padding: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #ff8da1;
+}
+
+p{
+    margin: auto;
+    padding: 8px;
+    font-family: "roboto";
+    color: white;
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+span.infoDelivery{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/*--div contenant la barre de recherche/logos + menu*/
+div.secondBanner{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 55px;
+    background-color: #ffffff;
+}
+
+.secondBanner, .mainLogo, .smallerLogos{
+    margin-top: 10px;
+}
+/*--titre de la page*/
+h1{
+    margin:0;
+    padding: 0;
+    font-family: "roboto";
+    letter-spacing: 3px;
+    font-size: 2rem;
+}
+
+/*--barre de recherche*/
+.searchBar{
+    margin-left: 25px;
+}
+
+.fa-search{
+    color: #ff8da1;
+    font-size:1.1rem;
+    margin-right: 15px;
+}
+
+input::placeholder{
+    color:black;
+    font-family: "roboto";
+    letter-spacing: 0.5px;;
+    font-size: 0.80rem;
+}
+
+input[type="text"], input[type="text"]:focus {
+    border: none;
+    outline: none; /*pour enlever le cadre autour*/
+}
+
+
+.animationUnderline{
+    margin: 0;
+    margin-left: 33px;
+    width: 0px;
+    height: 2px;
+    background-color: transparent;
+    transition: all 0.8s ease-in-out;
+}
+
+
+div.searchBar:hover div.animationUnderline, div.searchBar:active div.animationUnderline{
+    background-color: #ff8da1;
+    width: 87px;
+    height: 2px;
+}
+
+/*--petits logos pour suivre la page*/
+.smallerLogos{
+    margin-right: 25px;;
+}
+
+.fa-map-marker-alt, .fa-user-alt, .fa-heart, .fa-shopping-bag{
+    color: #ff8da1;
+    font-size: 1.2rem;
+    padding-right: 12px;
+    }
+
+
+.fa-shopping-bag{
+    padding-right: 0px;
+}
+
+
+                                /*--Début de mon menu*/
+
+nav{
+    margin:auto;
+    height: 45px;
+}
+.containerFlex2{
+    display: flex;
+    background-color: white;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    display: inline-block;
+    padding: 25px;
+}
+
+a.menu{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "roboto";
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    color: black;
+}
+
+a.menu:active, a.menu:focus{
+color: #ff8da1;
+}
+
+.underline-hover-effect{
+    display: flex;
+    position: relative;
+    padding-bottom: 0.25rem;
+
+}
+
+.underline-hover-effect::before{
+content:"";
+position: absolute;
+/*left:0; /*pour la direction: ça commence à gauche. Autrement, je change est je mets right*/
+right:0;
+bottom:0;
+width: 0; /*pour la voir dans un premier temps, la mettre à 100%, puis ensuite, mettre la valeur à 0*/
+height: 2px;
+background-color:#ff8da1;
+transition: width 0.25s ease-out;
+}
+
+.underline-hover-effect:hover::before{
+width: 100%;
+left: 0;
+right: auto;
+}
