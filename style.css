@@ -277,17 +277,21 @@ h2 {
 .slider_img1, .slider_img2, .slider_img3, .slider_img4 /*bénéficit du display flex + propriété de direction de DIV.PSEUDO_SLIDER*/
 {
   display: flex; /*toutes les images sont à la même hauteur*/
-  flex-flow: column nowrap; /*pour que les <p> apparaissent en dessous*/
+  flex-flow: column nowrap; /*pour que les <div> apparaissent en dessous*/
   width: 300px; /*taille des images*/
   height: 400px;
 }
 
-.slider_images{ /*bénéficit du display flex + propriété de direction des .slider_img*/
-    ;
+.infoFringues{
+    display: flex;
+    flex-flow: row nowrap;/*pour que les <div> apparaissent en en row mais grâce au flex-flow: colum de son parent, reste en dessous de l'image*/
+    justify-content: space-between;
 }
-
-.slider_img1 p { /*bénéficit du display flex + propriété de direction des .slider_img*/
+.infoFringues div { /*bénéficit du display flex + propriété de direction des .slider_img*/
     color: black;
+    font-family: "roboto";
+    font-weight: bold;
+    font-size: 0.85rem;
 }
 
 
