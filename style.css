@@ -320,9 +320,17 @@ h2 {
     transition: .5s ease-in;
 }
 
+/*animation when hover over .slider_img*/
 .slider_img1:hover .overlay, .slider_img2:hover .overlay, .slider_img3:hover .overlay, .slider_img4:hover .overlay{
     height: 55px;
     bottom: 0;
+}
+
+.overlay p{
+    color: black;
+    font-family: "roboto";
+    font-weight: bold;
+    font-size: 0.85rem;
 }
 
                                 /*-- Début de mon Footer */
