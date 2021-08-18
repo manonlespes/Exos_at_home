@@ -20,6 +20,11 @@ html, body {
     box-sizing: border-box;
 }
 
+.fas {
+    color: #ff7c94;
+    font-size: 1.5rem;
+}
+
 
                                 /*--Début de mon header*/
 .containerFlex1{
@@ -212,7 +217,7 @@ right: auto;
 
 
                                 /*Début de Image Banner*/
-section{ /* à modifier ou alors spécifier quelque part que toutes les sections prochaines devront aussi être flex*/
+section{ 
     display: flex;
     width: 100%;
     height: 650px;
@@ -242,15 +247,57 @@ section div {
 .secondImage img, .thirdImage img {
     width: 300px;
 }
+
+/*partie text de Image Banner*/
+
+.newIn{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.newIn p{
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "mission gothic";
+    margin-bottom: 0;
+    letter-spacing: 5px;
+}
+
+.newIn p span{
+    font-size: 5rem;
+}
+
+p.nouveaute{
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+.newIn button.imgButton{
+    margin-top: 80px;
+    background-color: white;
+    width: 250px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    font-family: "roboto";
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    color: rgb(95, 92, 92);
+}
+
+
+
                                /*Début de mon pseudo-slider*/
 
 article{
     display: flex;
     width: 100%;
-    height: 800px;
+    height: 600px;
     flex-wrap: nowrap;
     flex-direction: column;
-    border: solid black 2px;
 }
 
 .titleH2{ /*bénéficit du display flex + propriété de direction de ARTICLE*/
@@ -277,6 +324,7 @@ h2 {
     height: 450px;
     justify-content: space-evenly;
     padding: 0px 45px 0px;
+    position: relative; /*position relative pour les fas chevrons droit/gauche.*/
 }
 
 .slider_img1, .slider_img2, .slider_img3, .slider_img4 /*bénéficit du display flex + propriété de direction de DIV.PSEUDO_SLIDER*/
@@ -304,6 +352,7 @@ h2 {
     font-family: "roboto";
     font-weight: bold;
     font-size: 0.85rem;
+    margin-top: 5px;
 }
 
 .overlay {
@@ -314,7 +363,6 @@ h2 {
     width: 100%;
     height: 0;
     position: absolute; /*check .slider_img1*/
-    z-index: 1;
     bottom:0; /*si je ne mets pas ça, la transition va commencer en bas et finir en haut*/
     overflow: hidden;
     transition: .5s ease-in;
@@ -331,6 +379,22 @@ h2 {
     font-family: "roboto";
     font-weight: bold;
     font-size: 0.85rem;
+}
+
+.fa-chevron-right, .fa-chevron-left{
+    position: absolute; /*position absolute sur ma div .pseudo-slider qui est en position relative*/
+    
+}
+
+.fa-chevron-right{
+    right: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.fa-chevron-left{
+    left: 40px;
 }
 
                                 /*-- Début de mon Footer */
@@ -361,12 +425,9 @@ footer p {
 .CSText {
     font-size: 0.8rem;
 }
-
-.fas {
-    color: #ff7c94;
-    font-size: 1.5rem;
+.fa-credit-card, .fa-truck, .fa-box-open, .fa-comments, .fa-facebook-f, .fa-instagram, .fa-pinterest-p, .fa-youtube {
     text-align: center;
-    width: 100%;
+    width: 100%; /*tous les .fas sont en rose avec une même taile/couleur pour tous - check plus haut*/
 }
 
 /* Deuxième ligne du footer */
