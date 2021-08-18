@@ -278,4 +278,50 @@ footer p {
 
 .community {
     background-color: rgb(252, 239, 243);
+    display: flex;
+    height: 186px;
+    width: 100%;
+}
+
+.newsletter, .socialMedia {
+    flex-basis: 50%;
+}
+
+.communityInfo {
+    font-family: "roboto";
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+#cochon {
+    position: absolute;
+}
+
+#email {
+    width: 373px;
+    height: 50px;
+}
+
+#email:focus {
+    border: 1px solid black;
+    outline: none !important;
+}
+
+#btnOK {
+    background-color: #ff8da1;
+    width: 50px;
+    height: 50px;
+    color: white;
+    margin-left: -5px;
+}
+
+.socialMedia {
+    height: 50%;
+}
+
+.fab {
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-top: 15px;
 }
