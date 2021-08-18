@@ -30,13 +30,19 @@ html, body {
     align-items: baseline;
 }
 
-header, nav{ /*TODO!!!!!!!!POURQUOI unqiuement ma nav reste sticky?*/
+.sticky{ /*une div pour que mon header et ma nav soit sticky en scrollant*/
     margin: 0;
     padding: 0;
     width: 100%;
     position: -webkit-sticky; /*safari*/
     position: sticky;
     top: 0;    
+}
+
+header, nav{ 
+    margin: 0;
+    padding: 0;
+    width: 100%;  
 }
 /*--banner pour info sur ristourne livraison*/
 
@@ -269,7 +275,6 @@ h2 {
     display: flex;
     flex-flow: row nowrap;
     height: 450px;
-    border: dotted red 2px;
     justify-content: space-evenly;
     padding: 0px 45px 0px;
 }
