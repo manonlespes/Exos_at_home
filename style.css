@@ -30,13 +30,19 @@ html, body {
     align-items: baseline;
 }
 
-header, nav{ /*TODO!!!!!!!!POURQUOI unqiuement ma nav reste sticky?*/
+.sticky{ /*une div pour que mon header et ma nav soient sticky en scrollant*/
     margin: 0;
     padding: 0;
     width: 100%;
     position: -webkit-sticky; /*safari*/
     position: sticky;
     top: 0;    
+}
+
+header, nav{ 
+    margin: 0;
+    padding: 0;
+    width: 100%;  
 }
 /*--banner pour info sur ristourne livraison*/
 
@@ -205,7 +211,7 @@ right: auto;
 }
 
 
-/*Début de Image Banner*/
+                                /*Début de Image Banner*/
 section{ /* à modifier ou alors spécifier quelque part que toutes les sections prochaines devront aussi être flex*/
     display: flex;
     width: 100%;
@@ -236,7 +242,96 @@ section div {
 .secondImage img, .thirdImage img {
     width: 300px;
 }
+                               /*Début de mon pseudo-slider*/
 
+article{
+    display: flex;
+    width: 100%;
+    height: 800px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    border: solid black 2px;
+}
+
+.titleH2{ /*bénéficit du display flex + propriété de direction de ARTICLE*/
+    height: 150px;
+
+}
+
+h2 {
+    margin: 0px;
+    padding: 0;
+    margin-top: 50px;
+    font-family: "mission gothic";
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    text-align: center;
+
+}
+
+.pseudo_slider{ /*bénéficit du display flex + propriété de direction de ARTICLE*/
+    display: flex;
+    flex-flow: row nowrap;
+    height: 450px;
+    justify-content: space-evenly;
+    padding: 0px 45px 0px;
+}
+
+.slider_img1, .slider_img2, .slider_img3, .slider_img4 /*bénéficit du display flex + propriété de direction de DIV.PSEUDO_SLIDER*/
+{
+  display: flex; /*toutes les images sont à la même hauteur*/
+  flex-flow: column nowrap; /*pour que les <div> apparaissent en dessous*/
+  width: 300px; /*taille des images*/
+  height: 400px;
+  position: relative; /*position relative pour que ma div.superposition se position en absolue par rapport à cette div relative. Autrement, elle sortirait de son flux.*/
+}
+
+.slider_images{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.infoFringues{
+    display: flex;
+    flex-flow: row nowrap;/*pour que les <div> apparaissent en row mais grâce au flex-flow: column de son parent, reste en dessous de l'image*/
+    justify-content: space-between;
+}
+.infoFringues div { /*bénéficit du display flex + propriété de direction des .slider_img*/
+    color: black;
+    font-family: "roboto";
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.overlay {
+    display: flex;
+    background-color: rgba(255,250,250,0.7);/*An RGBA color value is specified with: rgba(red, green, blue, alpha). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).*/
+    border-top-left-radius: 3px ;
+    border-top-right-radius: 3px ;
+    width: 100%;
+    height: 0;
+    position: absolute; /*check .slider_img1*/
+    z-index: 1;
+    bottom:0; /*si je ne mets pas ça, la transition va commencer en bas et finir en haut*/
+    overflow: hidden;
+    transition: .5s ease-in;
+}
+
+/*animation when hover over .slider_img*/
+.slider_img1:hover .overlay, .slider_img2:hover .overlay, .slider_img3:hover .overlay, .slider_img4:hover .overlay{
+    height: 55px;
+    bottom: 0;
+}
+
+.overlay p{
+    color: black;
+    font-family: "roboto";
+    font-weight: bold;
+    font-size: 0.85rem;
+}
 
                                 /*-- Début de mon Footer */
 
