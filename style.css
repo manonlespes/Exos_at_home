@@ -247,10 +247,9 @@ section div {
 article{
     display: flex;
     width: 100%;
-    height: 800px;
+    height: 600px;
     flex-wrap: nowrap;
     flex-direction: column;
-    border: solid black 2px;
 }
 
 .titleH2{ /*bénéficit du display flex + propriété de direction de ARTICLE*/
@@ -304,6 +303,7 @@ h2 {
     font-family: "roboto";
     font-weight: bold;
     font-size: 0.85rem;
+    margin-top: 5px;
 }
 
 .overlay {
