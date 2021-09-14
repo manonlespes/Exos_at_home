@@ -325,6 +325,7 @@ h2 {
     justify-content: space-evenly;
     padding: 0px 45px 0px;
     position: relative; /*position relative pour les fas chevrons droit/gauche.*/
+    align-items: center;
 }
 
 .slider_img1, .slider_img2, .slider_img3, .slider_img4 /*bénéficit du display flex + propriété de direction de DIV.PSEUDO_SLIDER*/
